@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/dae4393213.js" crossorigin="anonymous"></script>
+        <title>Fisheye - photographe </title>
+    </head>
+    <body>
+        <header>
+            <a href="index.html" id="lien-logo">
+                <img src="assets/images/logo.png" class="logo" alt="logo Fisheye Page photographer">
+            </a>
+        </header>
+        <main id="main" class="main">
+            <div class="photograph-header">
+          
+            </div>
+            <!-- filter button -->
+            <div class="photograph-filter">
+                <div class="filter">
+                    <p class="filter-selec-title" tabindex="0">Trier par :</p>
+                    <div class="filter-container" tabindex="0">
+                        <label for="filter-select">Trier</label>
+                        <select id="filter-select" name="filter-select" aria-label="Tri media">
+                            <option value="popularity">Popularité</option>
+                            <option value="date">Date</option>
+                            <option value="title">Titre</option>
+                        </select>
+                        <div class="container-icon">
+                            <strong class="fa-solid fa-chevron-down"></strong>  
+                        </div> 
+                    </div> 
+                </div>                  
+                <!-- /filter button -->
+                <div class="photograph-body">
+
+                </div>
+            </div>
+        </main>
+        <div id="contact_modal" role="dialog"
+            aria-modal="true"
+            class="c-dialog">
+            <div class="modal-backdrop"></div>
+            <div class="modal" role="document">
+                <header>
+                    <h2 id="dialog-title">Contactez-moi</h2>
+                    <button class="modal_close_button" aria-label="Fermer" title="Fermer la fenêtre modale" onclick="closeModal()" tabindex="0">
+                        <img src="assets/icons/close2.svg" alt="Fermer la fenêtre modale">
+                    </button>
+                </header>
+                <p id="photographerName"></p>
+                <form name="contact">
+                    <div class="formData">
+                        <label for="fname">Prénom</label>
+                        <input class="text-control" type="text" id="fname" name="fname" tabindex="0">
+                        <span class="msgError"></span>
+                    </div>
+                    <div class="formData">
+                        <label for="lname">Nom</label>
+                        <input class="text-control" type="text" id="lname" name="lname" tabindex="0">
+                        <span class="msgError"></span>
+                    </div>
+                    <div class="formData">
+                        <label for="email">E-mail</label>
+                        <input class="text-control" type="email" id="email" name="email" tabindex="0">
+                        <span class="msgError"></span>
+                    </div>
+                    <div class="formData">
+                        <label for="contactMessage">Message</label>
+                        <textarea name="contactMessage" id="contactMessage" cols="20" rows="10" tabindex="0"></textarea>
+                        <span class="msgError"></span>
+                    </div>
+                    <input type="submit" id="contact_button" tabindex="0" class="contact_button" title="Envoyer et Fermer cette fenêtre modale" value="Envoyer">
+                </form>
+            </div>
+        </div>
+        <!-- lightbox  -->
+        <div id="lightboxId" 
+            class="lightbox"
+            role="dialog">
+            <button class="lightbox-close" tabIndex ="1">Fermer</button>
+            <button class="lightbox-next" tabIndex ="1">Suivant</button>
+            <button class="lightbox-prev">Précédent</button>
+            <div class="lightbox-container" id="lightbox-containe" tabindex="0">
+                <img class="m_lightbox" src="" alt="">
+                <video class="m_lightbox" src=""></video>
+            </div>
+            <!-- Caption text -->
+            <div class="caption-container" tabIndex ="0">
+                <p class="caption"></p>
+            </div>
+        </div>
+
+        <script src="/scripts/factories/photographer.js"></script>
+        <script src="scripts/factories/media.js"></script>
+        <script src="scripts/factories/lightBox.js"></script>
+        <script src="/scripts/pages/photographer.js"></script>
+      
+        <script src="/scripts/utils/contactForm.js"></script>
+    </body>
+</html>
+      
